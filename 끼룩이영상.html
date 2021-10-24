@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>동영상</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        a{
+            text-decoration: none;
+            display: block;
+            color: #333;
+        }
+        video{
+            width: 100%;
+            height: 1080px;
+            object-fit: cover;
+            position: relative;
+        }
+        .main_visual{
+            max-width: 1400px;
+            width: 100%;
+            margin: 0 auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+        }
+        .main_visual div{
+        width: 100%
+       
+        }
+        .main_visual div p{
+            position: absolute;
+            left: 0%;
+            font-size: 40px;
+            font-weight: bold;
+            background-color: seagreen;
+            color: #fff;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: text 20s infinite linear;
+        }
+
+        @keyframes text{
+            0%{
+                left: 0;
+                /* transform: translate(0); */
+            }
+            100%{
+                left: -100%;
+                /* transform: translateX(-100%); */
+            }
+        }
+
+        .tri{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 3;
+            background: url('img/삼각형이동툴.svg') center center / 0% cover;
+        }
+        .tri a{
+            width: 100%;
+            height: 10.71vw;
+            max-height: 150px;
+        }
+        .tri a img{
+            width: 100%;
+            height: 100%;
+            transition: all 2s;
+            offset: path('M298.3,258.6H0.9L149.6,1L298.3,258.6z');
+            animation: bird 5s alternate infinite linear;
+        }
+        @keyframes bird {
+            0%{offset-distance: 0%;}
+            33.33%{
+                offset-distance: 33.33%;
+                transition: ease-in-out;
+            }
+            66.66%{
+                offset-distance: 66.66%;
+                transition: ease-in-out;
+            }
+
+            100%{offset-distance: 100%
+                ;}
+        }
+        .tri a:hover img{
+             transform: rotate(360deg);
+        
+        }
+        @media screen and (max-width:747px){
+            video{
+            height: 100vh;
+           
+        }
+        .tri{
+            position: absolute;
+            top: 30%;
+            left: 30%;
+            transform: translate(-30%, -30%);
+            z-index: 3;
+            background: url('img/삼각형이동툴.svg') center center / 0% cover;
+        }
+        }
+    </style>
+</head>
+<body>
+
+    <video loop muted autoplay>
+        <source src="img/video.mp4" type="video/mp4">
+    </video>
+ <section class="main_visual" >   
+                <div>
+                    <p>
+                        끼룩이가 간다간다 뿅간다 끼룩이가 간다간다 뿅간다끼룩이가 간다간다 뿅간다 끼룩이가 간다간다 뿅간다 끼룩이가 간다간다 뿅간다 끼룩이가 간다간다 뿅간다 끼룩이가 간다간다 뿅간다 끼룩이가 간다간다 뿅간다끼룩이가 간다간다 뿅간다 끼룩이가 간다간다 뿅간다 끼룩이가 간다간다 뿅간다끼룩이가 간다간다 뿅간다 끼룩이가 간다간다 뿅간다 끼룩이가 간다간다 뿅간다끼룩이가 간다간다 뿅간다 끼룩이가 간다간다 뿅간다끼룩이가 간다간다 뿅간다 끼룩이가 간다간다 뿅간다 끼룩이가 간다간다 뿅간다끼룩이가 간다간다 뿅간다 끼룩이가 간다간다 뿅간다
+                    </p>
+                </div>  
+           
+  </section><!-- main_visual ed --> 
+  <section class="tri">
+    <a href="https://rrrr1133.github.io/hub/%EB%84%A4%EC%9D%B4%EB%B2%84%EB%A1%9C%EA%B7%B8%EC%9D%B8.html" title="로그인 페이지"><img src="img/알바트로스진짜.svg" alt="새"></a>
+</section><!-- tri ed -->
+</body>
+</html>
